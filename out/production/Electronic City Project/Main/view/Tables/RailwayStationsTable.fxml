@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<TableView xmlns:fx="http://javafx.com/fxml/1" fx:id="railwayStationsTable" xmlns="http://javafx.com/javafx/16"
+           fx:controller="Main.controller.Tables.RailwayStationsTable" HBox.hgrow="ALWAYS">
+    <columns>
+        <TableColumn fx:id="idCOL" text="ID"/>
+        <TableColumn fx:id="nameCOL" text="Name"/>
+        <TableColumn fx:id="areaCOL" text="Area"/>
+        <TableColumn fx:id="priceCOL" text="Price"/>
+        <TableColumn fx:id="vehiclesCOL" text="Vehicles"/>
+        <TableColumn fx:id="driversCOL" text="Drivers"/>
+        <TableColumn fx:id="tripsCOL" text="Trips"/>
+        <TableColumn fx:id="inputsCOL" text="Inputs"/>
+        <TableColumn fx:id="outputsCOL" text="Outputs"/>
+        <TableColumn fx:id="addressCOL" text="Address"/>
+    </columns>
+    <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+    </columnResizePolicy>
+</TableView>

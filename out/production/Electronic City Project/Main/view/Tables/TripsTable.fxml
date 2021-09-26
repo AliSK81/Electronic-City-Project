@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<TableView xmlns:fx="http://javafx.com/fxml/1" fx:id="tripsTable" HBox.hgrow="ALWAYS" prefHeight="458.0"
+           prefWidth="712.0" xmlns="http://javafx.com/javafx/16"
+           fx:controller="Main.controller.Tables.TripsTable">
+    <columns>
+        <TableColumn fx:id="idCOL" minWidth="-1.0" prefWidth="59.0" text="ID"/>
+        <TableColumn fx:id="typeCOL" minWidth="-1.0" prefWidth="175.0" text="Type"/>
+        <TableColumn fx:id="originTERCOL" minWidth="-1.0" prefWidth="117.0" text="Origin Terminal"/>
+        <TableColumn minWidth="-1.0" prefWidth="39.0" text="Destination">
+            <columns>
+                <TableColumn fx:id="destCityCOL" minWidth="-1.0" prefWidth="87.0" text="City"/>
+                <TableColumn fx:id="destTERCOL" minWidth="-1.0" prefWidth="87.0" text="Terminal"/>
+            </columns>
+        </TableColumn>
+        <TableColumn fx:id="driverIdCOL" prefWidth="75.0" text="Driver ID"/>
+        <TableColumn fx:id="vehicleIdCOL" prefWidth="75.0" text="Vehicle ID"/>
+        <TableColumn fx:id="numPassengersCOL" prefWidth="75.0" text="Passengers"/>
+        <TableColumn fx:id="costCOL" prefWidth="75.0" text="Cost"/>
+        <TableColumn fx:id="timeCOL" prefWidth="75.0" text="Time"/>
+    </columns>
+    <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+    </columnResizePolicy>
+</TableView>

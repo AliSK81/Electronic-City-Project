@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<TableView xmlns:fx="http://javafx.com/fxml/1" fx:id="boatsTable" HBox.hgrow="ALWAYS"
+           xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Tables.BoatsTable">
+    <columns>
+        <TableColumn fx:id="idCOL" text="ID"/>
+        <TableColumn fx:id="companyCOL" text="Company"/>
+        <TableColumn fx:id="capacityCOL" text="Capacity"/>
+        <TableColumn fx:id="priceCOL" text="Price"/>
+        <TableColumn fx:id="fuelCOL" text="Fuel"/>
+        <TableColumn fx:id="depthCOL" text="Max Depth"/>
+        <TableColumn fx:id="usageCOL" text="Usage"/>
+        <TableColumn fx:id="engineCOL" text="Engine"/>
+    </columns>
+    <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+    </columnResizePolicy>
+</TableView>

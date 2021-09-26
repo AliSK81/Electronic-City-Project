@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="500.0" prefWidth="800.0" spacing="10.0"
+      xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Pages.LiveProfitsPage">
+    <children>
+        <Label alignment="CENTER" cache="true" maxWidth="1.7976931348623157E308" opacity="0.88" prefWidth="774.0"
+               text="Live Profits" textAlignment="CENTER">
+            <font>
+                <Font name="Segoe UI Black" size="30.0"/>
+            </font>
+            <textFill>
+                <LinearGradient cycleMethod="REPEAT">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.014010720886290073" green="0.4278874397277832" blue="0.6052631735801697"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" blue="0.3465704023838043"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <effect>
+                <InnerShadow height="5.0" radius="2.0" width="5.0"/>
+            </effect>
+        </Label>
+        <HBox prefHeight="27.0" prefWidth="574.0">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" prefHeight="27.0" prefWidth="236.0" text="Holder"
+                       textFill="#4d4d4d">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label maxHeight="1.7976931348623157E308" prefHeight="27.0" prefWidth="155.0" text="City"
+                       textFill="#4d4d4d">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label maxHeight="1.7976931348623157E308" prefHeight="27.0" prefWidth="97.0" text="Bank"
+                       textFill="#4d4d4d">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label maxHeight="1.7976931348623157E308" prefHeight="27.0" prefWidth="102.0" text="Last Balance"
+                       textFill="#4d4d4d">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label maxHeight="1.7976931348623157E308" prefHeight="27.0" prefWidth="62.0" text="Profit"
+                       textFill="#4d4d4d">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="94.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="27.0"
+                       prefWidth="123.0" text="New Balance" textFill="#4d4d4d">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+                <Label layoutX="122.0" layoutY="10.0" maxHeight="1.7976931348623157E308" prefHeight="27.0"
+                       prefWidth="99.0" text="Time" textFill="#4d4d4d">
+                    <font>
+                        <Font name="System Bold Italic" size="12.0"/>
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+        <TextArea fx:id="textArea" prefHeight="333.0" prefWidth="574.0" VBox.vgrow="ALWAYS"/>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="47.0" prefWidth="574.0" spacing="10.0">
+            <children>
+                <Button fx:id="okBTN" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#okAction" prefHeight="60.0" prefWidth="60.0"
+                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                        text="OK" HBox.hgrow="ALWAYS"/>
+                <Button maxHeight="-Infinity" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                        onAction="#clearAction" prefHeight="60.0" prefWidth="60.0"
+                        style="-fx-background-color: linear-gradient(to top , #800013, #ff3c66); -fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 13;"
+                        text="Clear" textAlignment="CENTER" HBox.hgrow="ALWAYS"/>
+            </children>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+</VBox>

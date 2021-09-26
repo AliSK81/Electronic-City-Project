@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="426.0" prefWidth="385.0" spacing="10.0"
+      xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Forms.AddHotelServiceForm">
+    <opaqueInsets>
+        <Insets/>
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+    </padding>
+    <children>
+        <Label alignment="CENTER" cache="true" maxWidth="1.7976931348623157E308" opacity="0.88" prefHeight="36.0"
+               prefWidth="205.0" text="Add Hotel Services" textAlignment="CENTER">
+            <font>
+                <Font name="Segoe UI Black" size="25.0"/>
+            </font>
+            <textFill>
+                <LinearGradient cycleMethod="REPEAT">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.014010720886290073" green="0.4278874397277832" blue="0.6052631735801697"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" blue="0.3465704023838043"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <effect>
+                <InnerShadow height="5.0" radius="2.0" width="5.0"/>
+            </effect>
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </Label>
+        <HBox prefHeight="159.0" prefWidth="305.0" spacing="25.0">
+            <children>
+                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <CheckBox fx:id="restaurantCBOX" mnemonicParsing="false" onAction="#itemSelectAction"
+                                  text="Restaurant"/>
+                        <CheckBox fx:id="gameNetCBOX" layoutX="20.0" layoutY="11.0" mnemonicParsing="false"
+                                  onAction="#itemSelectAction" text="Game Net"/>
+                        <CheckBox fx:id="sportsHallCBOX" layoutX="20.0" layoutY="12.0" mnemonicParsing="false"
+                                  onAction="#itemSelectAction" text="Sports Hall"/>
+                        <CheckBox fx:id="libraryCBOX" layoutX="20.0" layoutY="47.0" mnemonicParsing="false"
+                                  onAction="#itemSelectAction" text="Library"/>
+                    </children>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <padding>
+                        <Insets left="10.0"/>
+                    </padding>
+                </VBox>
+                <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="20.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <CheckBox fx:id="swimmingPoolCBOX" mnemonicParsing="false" onAction="#itemSelectAction"
+                                  text="Swimming Pool"/>
+                        <CheckBox fx:id="shoppingCenterCBOX" mnemonicParsing="false" onAction="#itemSelectAction"
+                                  text="Shopping Center"/>
+                        <CheckBox fx:id="carParkingCBOX" mnemonicParsing="false" onAction="#itemSelectAction"
+                                  text="Car Parking"/>
+                        <CheckBox fx:id="cinemaCBOX" mnemonicParsing="false" onAction="#itemSelectAction"
+                                  text="Cinema"/>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets top="30.0"/>
+            </padding>
+        </HBox>
+        <HBox prefHeight="28.0" prefWidth="305.0">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" maxWidth="-Infinity" prefHeight="28.0" prefWidth="84.0"
+                       text="Total Price : " textFill="#434343" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </Label>
+                <Label fx:id="totalPriceLBL" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                       prefHeight="28.0" prefWidth="65.0" text="0" textFill="#434343" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="System Bold" size="13.0"/>
+                    </font>
+                </Label>
+            </children>
+            <VBox.margin>
+                <Insets bottom="20.0" left="5.0" top="20.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="43.0" prefWidth="253.0" spacing="10.0">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+            <children>
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doneAction"
+                        prefHeight="40.0"
+                        style="-fx-background-radius: 7; -fx-background-color: linear-gradient(to bottom right, #002f26, #11b297); -fx-font-weight: bold; -fx-text-fill: white;"
+                        text="Done" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0"/>
+                    </effect>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearAction"
+                        prefHeight="40.0"
+                        style="-fx-background-radius: 7; -fx-background-color: linear-gradient(to bottom right, #800013, #ff3c66); -fx-font-weight: bold; -fx-text-fill: white;"
+                        text="Clear" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0"/>
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>

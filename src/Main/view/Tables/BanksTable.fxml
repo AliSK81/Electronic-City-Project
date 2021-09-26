@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<TableView xmlns:fx="http://javafx.com/fxml/1" fx:id="banksTable" HBox.hgrow="ALWAYS" prefHeight="458.0"
+           prefWidth="712.0" xmlns="http://javafx.com/javafx/16"
+           fx:controller="Main.controller.Tables.BanksTable">
+    <columns>
+        <TableColumn fx:id="idCOL" minWidth="-1.0" prefWidth="59.0" text="ID"/>
+        <TableColumn fx:id="nameCOL" minWidth="-1.0" prefWidth="175.0" text="Name"/>
+        <TableColumn fx:id="addressCOL" minWidth="-1.0" prefWidth="175.0" text="Address"/>
+        <TableColumn fx:id="numAccountsCOL" minWidth="-1.0" prefWidth="99.0" text="All Accounts"/>
+        <TableColumn fx:id="activeAccountsCOL" minWidth="-1.0" prefWidth="117.0" text="Active Accounts"/>
+        <TableColumn fx:id="totalMoneyCOL" prefWidth="75.0" text="Total Money"/>
+    </columns>
+    <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+    </columnResizePolicy>
+</TableView>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="674.0" prefWidth="547.0" spacing="20.0"
+      xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Forms.AddTravelForm">
+    <children>
+        <Label alignment="CENTER" cache="true" maxWidth="1.7976931348623157E308" opacity="0.88" prefHeight="36.0"
+               prefWidth="205.0" text="Add New Trip" textAlignment="CENTER">
+            <font>
+                <Font name="Segoe UI Black" size="25.0"/>
+            </font>
+            <textFill>
+                <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.014010720886290073" green="0.4278874397277832" blue="0.6052631735801697"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" blue="0.3465704023838043"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <effect>
+                <InnerShadow height="5.0" radius="2.0" width="5.0"/>
+            </effect>
+        </Label>
+        <Label fx:id="errorLBL" alignment="CENTER" maxWidth="1.7976931348623157E308" opacity="0.59" prefWidth="305.0"
+               text="Error" textFill="RED">
+            <font>
+                <Font name="Segoe UI Semibold Italic" size="18.0"/>
+            </font>
+        </Label>
+        <HBox prefHeight="30.0" prefWidth="570.0" spacing="20.0">
+            <children>
+                <DatePicker fx:id="datePicker" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                            onAction="#dataChangedAction" prefWidth="150.0" promptText="Date" HBox.hgrow="ALWAYS"/>
+                <ComboBox fx:id="destCityCBOX" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          onAction="#dataChangedAction" prefWidth="150.0" promptText="Dest City" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </ComboBox>
+            </children>
+        </HBox>
+        <HBox prefHeight="30.0" prefWidth="570.0" spacing="20.0">
+            <children>
+                <ComboBox fx:id="originTerCBOX" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          onAction="#dataChangedAction" prefWidth="150.0" promptText="Origin Terminal"
+                          HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </ComboBox>
+                <ComboBox fx:id="destTerCBOX" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          onAction="#dataChangedAction" prefWidth="150.0" promptText="Dest Terminal"
+                          HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </ComboBox>
+            </children>
+        </HBox>
+        <HBox prefHeight="30.0" prefWidth="570.0" spacing="20.0">
+            <children>
+                <ComboBox fx:id="vehicleCBOX" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          onAction="#dataChangedAction" prefWidth="150.0" promptText="Vehicle" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </ComboBox>
+                <ComboBox fx:id="driverCBOX" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                          onAction="#dataChangedAction" prefWidth="150.0" promptText="Driver" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                </ComboBox>
+            </children>
+        </HBox>
+        <Label text="Passengers :"/>
+        <HBox fx:id="tableHolder" prefHeight="261.0" prefWidth="570.0"/>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="43.0" prefWidth="253.0" spacing="10.0">
+            <children>
+                <Button fx:id="doneBTN" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doneAction"
+                        prefHeight="40.0"
+                        style="-fx-background-radius: 7; -fx-background-color: linear-gradient(to bottom right, #002f26, #11b297); -fx-font-weight: bold; -fx-text-fill: white;"
+                        text="Done" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0"/>
+                    </effect>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelAction"
+                        prefHeight="40.0"
+                        style="-fx-background-radius: 7; -fx-background-color: linear-gradient(to bottom right, #800013, #ff3c66); -fx-font-weight: bold; -fx-text-fill: white;"
+                        text="Cancel" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0"/>
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+    </padding>
+</VBox>

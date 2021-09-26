@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<TableView xmlns:fx="http://javafx.com/fxml/1" fx:id="peopleTable" HBox.hgrow="ALWAYS"
+           xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Tables.PeopleTable">
+    <columns>
+        <TableColumn fx:id="idCOL" text="ID"/>
+        <TableColumn fx:id="nameCOL" text="Name"/>
+        <TableColumn fx:id="familyCOL" text="Family"/>
+        <TableColumn fx:id="birthYearCOL" text="BirthYear"/>
+        <TableColumn fx:id="genderCOL" text="Gender"/>
+        <TableColumn fx:id="jobCOL" text="Job"/>
+        <TableColumn fx:id="workingCOL" text="Working"/>
+        <TableColumn fx:id="creditorCOL" text="Creditor"/>
+    </columns>
+    <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+    </columnResizePolicy>
+</TableView>

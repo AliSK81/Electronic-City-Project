@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="600.0" prefWidth="903.0"
+      xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Pages.BankAccountPage">
+    <children>
+        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+            <children>
+                <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity"
+                        mnemonicParsing="false" onAction="#backAction" prefHeight="35.0" prefWidth="85.0"
+                        style="-fx-background-color: linear-gradient(to top , #800013, #ff3c66); -fx-font-weight: bold; -fx-text-fill: white;"
+                        text="Bank" textAlignment="CENTER">
+                    <HBox.margin>
+                        <Insets left="5.0"/>
+                    </HBox.margin>
+                </Button>
+                <Label alignment="CENTER" cache="true" maxWidth="1.7976931348623157E308" opacity="0.88"
+                       text="Bank Account" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                    <font>
+                        <Font name="Segoe UI Black" size="30.0"/>
+                    </font>
+                    <textFill>
+                        <LinearGradient cycleMethod="REPEAT">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.014010720886290073" green="0.4278874397277832"
+                                               blue="0.6052631735801697"/>
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" blue="0.3465704023838043"/>
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                    <effect>
+                        <InnerShadow height="5.0" radius="2.0" width="5.0"/>
+                    </effect>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <padding>
+                        <Insets right="75.0"/>
+                    </padding>
+                </Label>
+            </children>
+        </HBox>
+        <TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT"
+                 tabClosingPolicy="UNAVAILABLE" tabMinHeight="45.0" tabMinWidth="130.0" VBox.vgrow="ALWAYS">
+            <tabs>
+                <Tab style="-fx-font-weight: bold; -fx-font-size: 13;" text="Account Info">
+                    <content>
+                        <VBox maxHeight="1.7976931348623157E308" spacing="30.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="130.0" prefWidth="803.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <GridPane maxWidth="1.7976931348623157E308" prefWidth="411.0"
+                                                  HBox.hgrow="ALWAYS">
+                                            <columnConstraints>
+                                                <ColumnConstraints maxWidth="159.0" minWidth="110.0" prefWidth="156.0"/>
+                                                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308"
+                                                                   minWidth="254.0" prefWidth="257.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints prefHeight="25.0" vgrow="ALWAYS"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <Label maxHeight="1.7976931348623157E308"
+                                                       maxWidth="1.7976931348623157E308" text="Holder">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="holderLBL" layoutX="10.0" layoutY="44.0"
+                                                       maxHeight="1.7976931348623157E308"
+                                                       maxWidth="1.7976931348623157E308" text="Holder"
+                                                       GridPane.columnIndex="1">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label layoutX="10.0" layoutY="82.0" maxHeight="1.7976931348623157E308"
+                                                       maxWidth="1.7976931348623157E308" text="Balance"
+                                                       GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="balanceLBL" layoutX="142.0" layoutY="145.0"
+                                                       maxHeight="1.7976931348623157E308"
+                                                       maxWidth="1.7976931348623157E308" text="Balance"
+                                                       GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label maxHeight="1.7976931348623157E308"
+                                                       maxWidth="1.7976931348623157E308" text="Next Profit"
+                                                       GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="profitTimeLBL" maxHeight="1.7976931348623157E308"
+                                                       maxWidth="1.7976931348623157E308" text="Profit Time"
+                                                       GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </GridPane>
+                                        <GridPane maxWidth="1.7976931348623157E308" prefHeight="254.0" prefWidth="387.0"
+                                                  HBox.hgrow="ALWAYS">
+                                            <columnConstraints>
+                                                <ColumnConstraints maxWidth="156.0" minWidth="110.0" prefWidth="125.0"/>
+                                                <ColumnConstraints hgrow="ALWAYS" maxWidth="1.7976931348623157E308"
+                                                                   minWidth="233.0" prefWidth="264.0"/>
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints prefHeight="25.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints prefHeight="25.0" vgrow="SOMETIMES"/>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                            </rowConstraints>
+                                            <children>
+                                                <Label text="Username">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label text="Password" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font name="Microsoft JhengHei Light" size="22.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="passwordTXT" maxHeight="-Infinity"
+                                                           maxWidth="1.7976931348623157E308"
+                                                           onKeyTyped="#changeInfoAction" prefHeight="30.0"
+                                                           promptText="Enter Password" style="-fx-background-radius: 5;"
+                                                           GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                    <font>
+                                                        <Font size="22.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <TextField fx:id="usernameTXT" maxHeight="-Infinity"
+                                                           maxWidth="1.7976931348623157E308"
+                                                           onKeyTyped="#changeInfoAction" prefHeight="30.0"
+                                                           promptText="Enter Username" style="-fx-background-radius: 5;"
+                                                           GridPane.columnIndex="1">
+                                                    <font>
+                                                        <Font size="22.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <Label fx:id="errorLBL" maxWidth="1.7976931348623157E308" opacity="0.59"
+                                                       prefHeight="37.0" prefWidth="305.0" text="Error" textFill="RED"
+                                                       GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                    <font>
+                                                        <Font name="Segoe UI Semibold Italic" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </GridPane>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="BOTTOM_CENTER" spacing="20.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <Button fx:id="updateInfoBTN" maxHeight="-Infinity"
+                                                maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                                onAction="#updateInfoAction" prefHeight="60.0" prefWidth="60.0"
+                                                style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                                text="Update Info" HBox.hgrow="ALWAYS"/>
+                                        <Button fx:id="resetInfoBTN" maxHeight="-Infinity"
+                                                maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                                onAction="#resetInfoAction" prefHeight="60.0" prefWidth="60.0"
+                                                style="-fx-background-color: linear-gradient(to top , #800013, #ff3c66); -fx-font-weight: bold; -fx-text-fill: white; -fx-font-size: 13;"
+                                                text="Reset Info" textAlignment="CENTER" HBox.hgrow="ALWAYS"/>
+                                    </children>
+                                </HBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="40.0" left="50.0" right="50.0" top="60.0"/>
+                            </padding>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab fx:id="transactionsTAB" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Transactions">
+                    <content>
+                        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" focusTraversable="true" minWidth="-Infinity"
+                                      prefWidth="190.0">
+                                    <children>
+                                        <HBox>
+                                            <children>
+                                                <Label maxWidth="1.7976931348623157E308" prefWidth="145.0"
+                                                       text="Transactions :" HBox.hgrow="ALWAYS">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0"/>
+                                                    </font>
+                                                </Label>
+                                                <Label fx:id="numTransactionsLBL" maxWidth="1.7976931348623157E308"
+                                                       prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
+                                                    <font>
+                                                        <Font name="System Bold" size="13.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets bottom="30.0"/>
+                                            </VBox.margin>
+                                        </HBox>
+                                        <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0"
+                                              VBox.vgrow="ALWAYS">
+                                            <children>
+                                                <Spinner fx:id="moneySPN" maxWidth="1.7976931348623157E308"
+                                                         onMouseClicked="#changeMoneyAction" prefHeight="38.0"
+                                                         prefWidth="170.0"/>
+                                                <Separator prefWidth="200.0"/>
+                                                <Button fx:id="addTransactionBTN" maxWidth="1.7976931348623157E308"
+                                                        mnemonicParsing="false" onAction="#addTransactionAction"
+                                                        prefHeight="65.0"
+                                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                                        text="Deposit"/>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets/>
+                                            </VBox.margin>
+                                        </VBox>
+                                    </children>
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets/>
+                                    </HBox.margin>
+                                </VBox>
+                            </children>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                        </HBox>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>

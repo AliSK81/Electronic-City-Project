@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.HBox?>
+<TableView xmlns:fx="http://javafx.com/fxml/1" fx:id="hotelsTable" HBox.hgrow="ALWAYS"
+           xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Tables.HotelsTable">
+    <columns>
+        <TableColumn fx:id="idCOL" text="ID"/>
+        <TableColumn fx:id="nameCOL" text="Name"/>
+        <TableColumn fx:id="addressCOL" text="Address"/>
+        <TableColumn fx:id="priceCOL" text="Price"/>
+        <TableColumn fx:id="roomsCOL" text="Rooms"/>
+        <TableColumn fx:id="starsCOL" text="Stars"/>
+    </columns>
+    <columnResizePolicy>
+        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+    </columnResizePolicy>
+</TableView>

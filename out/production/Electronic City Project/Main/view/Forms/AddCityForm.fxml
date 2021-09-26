@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.Font?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="362.0" prefWidth="385.0" spacing="10.0"
+      xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Forms.AddCityForm">
+    <opaqueInsets>
+        <Insets/>
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="40.0" left="40.0" right="40.0" top="40.0"/>
+    </padding>
+    <children>
+        <Label alignment="CENTER" cache="true" maxWidth="1.7976931348623157E308" opacity="0.88" prefHeight="36.0"
+               prefWidth="205.0" text="Add New City" textAlignment="CENTER">
+            <font>
+                <Font name="Segoe UI Black" size="25.0"/>
+            </font>
+            <textFill>
+                <LinearGradient cycleMethod="REPEAT">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.014010720886290073" green="0.4278874397277832" blue="0.6052631735801697"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" blue="0.3465704023838043"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <effect>
+                <InnerShadow height="5.0" radius="2.0" width="5.0"/>
+            </effect>
+        </Label>
+        <Label fx:id="errorLBL" alignment="CENTER" maxWidth="1.7976931348623157E308" opacity="0.59" prefHeight="37.0"
+               prefWidth="305.0" text="Error" textFill="RED">
+            <font>
+                <Font name="Segoe UI Semibold Italic" size="18.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="nameTXT" maxWidth="1.7976931348623157E308" prefHeight="40.0" promptText="Name"
+                   style="-fx-background-radius: 7;">
+            <VBox.margin>
+                <Insets/>
+            </VBox.margin>
+        </TextField>
+        <HBox maxWidth="1.7976931348623157E308" prefHeight="40.0">
+            <children>
+                <Label maxHeight="1.7976931348623157E308" prefHeight="40.0" prefWidth="58.0" text="Money :"
+                       textFill="#a4a4a4" HBox.hgrow="ALWAYS"/>
+                <Spinner fx:id="moneySPN" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+                         onMouseClicked="#clearErrorAction" prefHeight="40.0" HBox.hgrow="ALWAYS"/>
+            </children>
+            <padding>
+                <Insets left="2.0" right="2.0"/>
+            </padding>
+        </HBox>
+        <HBox alignment="BOTTOM_CENTER" prefHeight="43.0" prefWidth="253.0" spacing="10.0">
+            <VBox.margin>
+                <Insets top="30.0"/>
+            </VBox.margin>
+            <children>
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#doneAction"
+                        prefHeight="40.0"
+                        style="-fx-background-radius: 7; -fx-background-color: linear-gradient(to bottom right, #002f26, #11b297); -fx-font-weight: bold; -fx-text-fill: white;"
+                        text="Done" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0"/>
+                    </effect>
+                </Button>
+                <Button alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308"
+                        maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearAction"
+                        prefHeight="40.0"
+                        style="-fx-background-radius: 7; -fx-background-color: linear-gradient(to bottom right, #800013, #ff3c66); -fx-font-weight: bold; -fx-text-fill: white;"
+                        text="Clear" HBox.hgrow="ALWAYS">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" height="10.0" radius="4.5" width="10.0"/>
+                    </effect>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</VBox>

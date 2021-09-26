@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" prefHeight="600.0" prefWidth="900.0"
+      xmlns="http://javafx.com/javafx/16" fx:controller="Main.controller.Pages.CityPage">
+    <HBox alignment="CENTER_LEFT" minHeight="-Infinity" prefHeight="60.0">
+        <Button alignment="CENTER" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity"
+                mnemonicParsing="false" onAction="#backAction" prefHeight="35.0" prefWidth="85.0"
+                style="-fx-background-color: linear-gradient(to top , #800013, #ff3c66); -fx-font-weight: bold; -fx-text-fill: white;"
+                text="Country" textAlignment="CENTER">
+            <HBox.margin>
+                <Insets left="5.0"/>
+            </HBox.margin>
+        </Button>
+        <Label fx:id="nameLBL" alignment="CENTER" cache="true" maxWidth="1.7976931348623157E308" opacity="0.88"
+               text="City Name" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+            <font>
+                <Font name="Segoe UI Black" size="30.0"/>
+            </font>
+            <textFill>
+                <LinearGradient cycleMethod="REPEAT">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.014010720886290073" green="0.4278874397277832" blue="0.6052631735801697"/>
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" blue="0.3465704023838043"/>
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+            <effect>
+                <InnerShadow height="5.0" radius="2.0" width="5.0"/>
+            </effect>
+            <HBox.margin>
+                <Insets/>
+            </HBox.margin>
+            <padding>
+                <Insets right="75.0"/>
+            </padding>
+        </Label>
+    </HBox>
+    <TabPane fx:id="tabPane" cache="true" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308"
+             rotateGraphic="true" tabClosingPolicy="UNAVAILABLE" tabMinHeight="45.0" tabMinWidth="130.0"
+             VBox.vgrow="ALWAYS">
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+        <Tab fx:id="peopleTAB" style="-fx-font-weight: bold; -fx-font-size: 13;" text="People">
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <VBox alignment="CENTER_RIGHT" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                    <HBox>
+                        <VBox.margin>
+                            <Insets bottom="30.0"/>
+                        </VBox.margin>
+                        <VBox prefWidth="145.0" spacing="30.0">
+                            <HBox.margin>
+                                <Insets/>
+                            </HBox.margin>
+                            <Label maxWidth="1.7976931348623157E308" text="Population :">
+                                <font>
+                                    <Font name="System Bold" size="13.0"/>
+                                </font>
+                            </Label>
+                            <Label maxWidth="1.7976931348623157E308" text="Workers :">
+                                <font>
+                                    <Font name="System Bold" size="13.0"/>
+                                </font>
+                            </Label>
+                            <Label maxWidth="1.7976931348623157E308" text="Creditors :">
+                                <font>
+                                    <Font name="System Bold" size="13.0"/>
+                                </font>
+                            </Label>
+                        </VBox>
+                        <VBox prefWidth="30.0" spacing="30.0">
+                            <Label fx:id="populationLBL" maxWidth="1.7976931348623157E308" text="0">
+                                <font>
+                                    <Font name="System Bold" size="13.0"/>
+                                </font>
+                            </Label>
+                            <Label fx:id="numWorkersLBL" contentDisplay="CENTER" maxWidth="1.7976931348623157E308"
+                                   text="0">
+                                <font>
+                                    <Font name="System Bold" size="13.0"/>
+                                </font>
+                            </Label>
+                            <Label fx:id="numCreditorsLBL" contentDisplay="CENTER" maxWidth="1.7976931348623157E308"
+                                   text="0">
+                                <font>
+                                    <Font name="System Bold" size="13.0"/>
+                                </font>
+                            </Label>
+                        </VBox>
+                    </HBox>
+                    <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                        <VBox.margin>
+                            <Insets/>
+                        </VBox.margin>
+                        <CheckBox fx:id="addRandomPersonCBOX" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                  text="Add Random"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addPersonAction"
+                                prefHeight="65.0"
+                                style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                text="Add Person"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#removePersonAction"
+                                prefHeight="65.0"
+                                style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                text="Remove Person"/>
+                    </VBox>
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                </VBox>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+            </HBox>
+        </Tab>
+        <Tab fx:id="hotelsTAB" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Hotels">
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <VBox alignment="TOP_CENTER" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                    <HBox.margin>
+                        <Insets/>
+                    </HBox.margin>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <HBox>
+                        <VBox.margin>
+                            <Insets bottom="30.0"/>
+                        </VBox.margin>
+                        <Label maxWidth="1.7976931348623157E308" prefWidth="145.0" text="Hotels :" HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="numHotelsLBL" maxWidth="1.7976931348623157E308" prefWidth="30.0" text="0"
+                               HBox.hgrow="ALWAYS">
+                            <font>
+                                <Font name="System Bold" size="13.0"/>
+                            </font>
+                        </Label>
+                    </HBox>
+                    <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                        <VBox.margin>
+                            <Insets/>
+                        </VBox.margin>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#enterHotelAction"
+                                prefHeight="65.0"
+                                style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                text="Enter Hotel"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addHotelAction"
+                                prefHeight="65.0"
+                                style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                text="Add Hotel"/>
+                        <Button layoutX="10.0" layoutY="274.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                onAction="#removeHotelAction" prefHeight="65.0"
+                                style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                text="Remove Hotel"/>
+                    </VBox>
+                </VBox>
+            </HBox>
+        </Tab>
+        <Tab fx:id="terminalsTAB" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Terminals">
+            <TabPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="477.0" prefWidth="905.0" side="LEFT"
+                     tabClosingPolicy="UNAVAILABLE" tabMinHeight="40.0" tabMinWidth="100.0">
+                <Tab fx:id="airportsTAB" style="-fx-font-weight: bold;" text="Airports">
+                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <VBox alignment="CENTER_RIGHT" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                            <opaqueInsets>
+                                <Insets/>
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                            <HBox>
+                                <children>
+                                    <Label maxWidth="1.7976931348623157E308" prefWidth="145.0" text="Airports :"
+                                           HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="numAirportsLBL" maxWidth="1.7976931348623157E308" prefWidth="30.0"
+                                           text="0" HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                                <VBox.margin>
+                                    <Insets/>
+                                </VBox.margin>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#enterAirportAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Enter Airport"/>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#addAirportAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Add Airport"/>
+                                <Button layoutX="10.0" layoutY="166.0" maxWidth="1.7976931348623157E308"
+                                        mnemonicParsing="false" onAction="#removeAirportAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Remove Airport"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </Tab>
+                <Tab fx:id="busTerminalTAB" style="-fx-font-weight: bold;" text="Bus Terminals">
+                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <VBox alignment="CENTER_RIGHT" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                            <opaqueInsets>
+                                <Insets/>
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                            <HBox>
+                                <children>
+                                    <Label maxWidth="1.7976931348623157E308" prefWidth="145.0" text="Bus Terminals :"
+                                           HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="numBusTerminalsLBL" maxWidth="1.7976931348623157E308" prefWidth="30.0"
+                                           text="0" HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                                <VBox.margin>
+                                    <Insets/>
+                                </VBox.margin>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#enterBusTerminalAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Enter Bus Terminal"/>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#addBusTerminalAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Add Bus Terminal"/>
+                                <Button layoutX="10.0" layoutY="166.0" maxWidth="1.7976931348623157E308"
+                                        mnemonicParsing="false" onAction="#removeBusTerminalAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Remove Bus Terminal"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </Tab>
+                <Tab fx:id="railwaysTAB" style="-fx-font-weight: bold;" text="Railway Stations">
+                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <VBox alignment="CENTER_RIGHT" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                            <opaqueInsets>
+                                <Insets/>
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                            <HBox>
+                                <children>
+                                    <Label maxWidth="1.7976931348623157E308" prefWidth="145.0" text="Railway Stations :"
+                                           HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="numRailwaysLBL" maxWidth="1.7976931348623157E308" prefWidth="30.0"
+                                           text="0" HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                                <VBox.margin>
+                                    <Insets/>
+                                </VBox.margin>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#enterRailwayAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Enter Railway Station"/>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#addRailwayAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Add Railway Station"/>
+                                <Button layoutX="10.0" layoutY="166.0" maxWidth="1.7976931348623157E308"
+                                        mnemonicParsing="false" onAction="#removeRailwayAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Remove Railway Station"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </Tab>
+                <Tab fx:id="shippingPortsTAB" style="-fx-font-weight: bold;" text="Shipping Ports">
+                    <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <VBox alignment="CENTER_RIGHT" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                            <opaqueInsets>
+                                <Insets/>
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                            </padding>
+                            <HBox>
+                                <children>
+                                    <Label maxWidth="1.7976931348623157E308" prefWidth="145.0" text="Shipping Ports :"
+                                           HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="numShippingPortsLBL" maxWidth="1.7976931348623157E308"
+                                           prefWidth="30.0" text="0" HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                                <VBox.margin>
+                                    <Insets/>
+                                </VBox.margin>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#enterShippingPortAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Enter Shipping Port"/>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#addShippingPortAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Add Shipping Port"/>
+                                <Button layoutX="10.0" layoutY="166.0" maxWidth="1.7976931348623157E308"
+                                        mnemonicParsing="false" onAction="#removeShippingPortAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Remove Shipping Port"/>
+                            </VBox>
+                        </VBox>
+                    </HBox>
+                </Tab>
+            </TabPane>
+        </Tab>
+        <Tab fx:id="tripsTAB" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Trips">
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <VBox alignment="CENTER_RIGHT" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <children>
+                        <HBox>
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" prefWidth="145.0" text="Trips :"
+                                       HBox.hgrow="ALWAYS">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="numTripsLBL" maxWidth="1.7976931348623157E308" prefWidth="30.0" text="0"
+                                       HBox.hgrow="ALWAYS">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <ComboBox fx:id="terminalsCBOX" maxWidth="1.7976931348623157E308"
+                                  onAction="#selectTripsTerminalAction" prefWidth="150.0" promptText="Select Terminal">
+                            <VBox.margin>
+                                <Insets top="20.0"/>
+                            </VBox.margin>
+                        </ComboBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <RadioButton fx:id="allTripsRBTN" minWidth="160.0" mnemonicParsing="false"
+                                             onAction="#tripTypeAction" selected="true" text="All Trips">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="tripsFilterGroup"/>
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="incomingTripsRBTN" minWidth="160.0" mnemonicParsing="false"
+                                             onAction="#tripTypeAction" text="Incoming"
+                                             toggleGroup="$tripsFilterGroup"/>
+                                <RadioButton fx:id="outgoingTripsRBTN" minWidth="160.0" mnemonicParsing="false"
+                                             onAction="#tripTypeAction" prefWidth="160.0" text="Outgoing"
+                                             toggleGroup="$tripsFilterGroup"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="40.0" top="20.0"/>
+                            </VBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                            <children>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#addTripAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Add Trip"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+            </HBox>
+        </Tab>
+        <Tab fx:id="paymentsTAB" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Payments">
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <VBox alignment="CENTER_RIGHT" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                    <opaqueInsets>
+                        <Insets/>
+                    </opaqueInsets>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </padding>
+                    <children>
+                        <HBox>
+                            <children>
+                                <Label maxWidth="1.7976931348623157E308" prefHeight="19.0" prefWidth="96.0"
+                                       text="Total Money :">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="totalMoneyLBL" maxWidth="1.7976931348623157E308" prefWidth="30.0" text="0"
+                                       HBox.hgrow="ALWAYS">
+                                    <font>
+                                        <Font name="System Bold" size="13.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <VBox spacing="5.0">
+                            <children>
+                                <RadioButton fx:id="allPaymentsRBTN" minWidth="160.0" mnemonicParsing="false"
+                                             onAction="#paymentTypeAction" selected="true" text="All Payments">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="tripsFilterGroup1"/>
+                                    </toggleGroup>
+                                </RadioButton>
+                                <RadioButton fx:id="incomesRBTN" minWidth="160.0" mnemonicParsing="false"
+                                             onAction="#paymentTypeAction" text="Incomes"
+                                             toggleGroup="$tripsFilterGroup1"/>
+                                <RadioButton fx:id="outputsRBTN" minWidth="160.0" mnemonicParsing="false"
+                                             onAction="#paymentTypeAction" prefWidth="160.0" text="Outputs"
+                                             toggleGroup="$tripsFilterGroup1"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets bottom="40.0" top="40.0"/>
+                            </VBox.margin>
+                        </VBox>
+                        <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                            <VBox.margin>
+                                <Insets/>
+                            </VBox.margin>
+                            <children>
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                        onAction="#paySalariesAction" prefHeight="65.0"
+                                        style="-fx-background-color: linear-gradient(to top , #002f26, #11b297) linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                        text="Pay Salaries"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+            </HBox>
+        </Tab>
+        <Tab fx:id="banksTAB" style="-fx-font-weight: bold; -fx-font-size: 13;" text="Banks">
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                </padding>
+                <children>
+                    <VBox alignment="TOP_CENTER" focusTraversable="true" minWidth="-Infinity" prefWidth="190.0">
+                        <HBox.margin>
+                            <Insets/>
+                        </HBox.margin>
+                        <padding>
+                            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        </padding>
+                        <children>
+                            <HBox>
+                                <VBox.margin>
+                                    <Insets bottom="30.0"/>
+                                </VBox.margin>
+                                <children>
+                                    <Label maxWidth="1.7976931348623157E308" prefWidth="145.0" text="Banks :"
+                                           HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="numBanksLBL" maxWidth="1.7976931348623157E308" prefWidth="30.0"
+                                           text="0" HBox.hgrow="ALWAYS">
+                                        <font>
+                                            <Font name="System Bold" size="13.0"/>
+                                        </font>
+                                    </Label>
+                                </children>
+                            </HBox>
+                            <VBox alignment="BOTTOM_CENTER" minHeight="-Infinity" spacing="15.0" VBox.vgrow="ALWAYS">
+                                <VBox.margin>
+                                    <Insets/>
+                                </VBox.margin>
+                                <children>
+                                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                            onAction="#enterBankAction" prefHeight="65.0"
+                                            style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                            text="Enter Bank"/>
+                                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                            onAction="#addBankAction" prefHeight="65.0"
+                                            style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                            text="Add Bank"/>
+                                    <Button layoutX="10.0" layoutY="274.0" maxWidth="1.7976931348623157E308"
+                                            mnemonicParsing="false" prefHeight="65.0"
+                                            style="-fx-background-color: linear-gradient(to top , #002f26, #11b297); -fx-text-base-color: white; -fx-font-weight: bold; -fx-font-size: 13;"
+                                            text="TEMP"/>
+                                </children>
+                            </VBox>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+        </Tab>
+    </TabPane>
+</VBox>
